@@ -3,6 +3,16 @@ Problem Statement: Identify the employees who will be promoted. Its an Analytics
 Solution Approach:
 
 Step 1: Data Exploration
+
+==> Variables
+
+'no_of_trainings', 'age', 'previous_year_rating', 'length_of_service',
+       'KPIs_met_80', 'awards_won', 'avg_training_score', 'department',          
+       'region',
+       'education', 'gender',
+       'recruitment_channel', 'recruitment_channel'
+
+
 ==> Check for Missing Data & Impute
 -> 2 variables are having missing data - education & previous_year_rating
 -> education -- fill the missing value with the most frequent category
@@ -16,3 +26,24 @@ Step 1: Data Exploration
 
 ==> Other Data Exploration & Visualization
 -> Provided as in the notebook enclosed
+
+==> Feature Engineering
+
+-> 1. kpi_prev_rating = KPIs_met_80 + previous_year_rating
+-> 2. year_tobe_served = 60 - age + length_of_service
+-> 3. drop length_of_service','KPIs_met_80','previous_year_rating','age
+-> Tried creating polynomial features but not much improvement in accuracy and F1 score [
+
+==> Solving Imbalanced Data set problem 
+-> Tried SMOTE to balance out the not promoted and promoted data but that failed due to poor f1 score & poor accuracy[hr_Analytics-Copy1]
+
+==> Developed Models
+-> Random Forest
+-> Logitic Regression
+-> XGBoost -- Best f1-score & accuracy -- chose to go for Grid search with XGBoost
+
+==> Grid Search for XGBoost [hr_analytics1.ipnyb]
+'base_score': 0.6, 'learning_rate': 0.15, 'max_depth': 6, 'n_estimators': 200
+
+==> Conclusion [final.ipnyb]
+Got F1-score of 0.49 with the above hyper parameters and the above mentioned feature engineering 
