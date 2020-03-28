@@ -1,3 +1,18 @@
 Problem Statement: Identify the employees who will be promoted. Its an Analytics Vidya competition - HR Analytics
 
 Solution Approach:
+
+Step 1: Data Exploration
+==> Check for Missing Data & Impute
+-> 2 variables are having missing data - education & previous_year_rating
+-> education -- fill the missing value with the most frequent category
+-> previous_year_rating -- calculate the avg. rating where is_promoted = 1 & is_promoted = 0 and then impute the missing values
+-> with these 2 avg. value in the respective rows, i.e. where previous_year_rating is null and is_promoted = 1, fill it with the avg 
+-> of previous_year_rating where is_promoted = 1 and vice versa for rows with previous_year_rating null and is_promoted = 0 
+
+==> Check for correlation 
+-> we can see age is highly correlated with the length of service, which is logical again for the previous_yr_rating is 
+-> correlated with kpi met 80%
+
+==> Other Data Exploration & Visualization
+-> Provided as in the notebook enclosed
