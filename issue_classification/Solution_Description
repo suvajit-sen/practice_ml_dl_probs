@@ -10,3 +10,4 @@ The issues can be related to one of the products of the bank i.e. Mortgage, Bank
 # Apply Logistic Regression, Linear SVM, Random Forest & XGBoost
 # We are getting the best accuracy for Linear SVM but Overfitting is happening with Linear SVM.
 # We are getting the least over fitting in Logistic Regression, so we will go with Logistic Regression only to build the entire model
+# Now as our model has been developed, we will be creating a deployable classifier - we will deploy that on Flask
