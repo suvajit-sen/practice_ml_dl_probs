@@ -1,0 +1,12 @@
+This project is to automatically categorize consumer issues of a bank by analyzing the description of the issue.
+The issues can be related to one of the products of the bank i.e. Mortgage, Bank Account or Service
+
+--> Solution Approach ( As per the issue_classification notebook)
+# Visualize the data set
+# Apply Lemmatization & Stemming on the consumer complaint 
+# Develop a TFIDF matrix for feature extraction
+# Check the associated words to the categories
+# Use TFIDF features as X and Product category as Y
+# Apply Logistic Regression, Linear SVM, Random Forest & XGBoost
+# We are getting the best accuracy for Linear SVM but Overfitting is happening with Linear SVM.
+# We are getting the least over fitting in Logistic Regression, so we will go with Logistic Regression only to build the entire model
